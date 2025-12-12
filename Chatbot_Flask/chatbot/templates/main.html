@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with Jamie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chatbot User Interface</h1>
+            <p>Welcome to Jamie your Ai Assistant Chatbot!</p>
+        </div>
+        <div class="chatbot-widget">
+            <div class="chat-header">
+                <div class="avatar-info">
+                    <div class="avatar">J</div>
+                    <div class="user-info">
+                        <h3>chat with Jamie <i class="fas fa-robot"></i></h3>
+                        <div class="status"><div class="online-dot"></div><span>We're online</span></div>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <button class="control-btn" id="minimize-btn"><i class="fas fa-minus"></i></button>
+                    <button class="control-btn" id="back-btn"><i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+            <div class="chat-container">
+                <div class="messages-container" id="messages-container">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Hi! Promo code for new users: <b>WELCOME10</b>
+                            <div class="quick-reply-container">
+                                <div class="quick-reply" data-reply="Yes, sure!">Yes, sure!</div>
+                                <div class="quick-reply" data-reply="No, thanks">No, thanks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="text" class="message-input" id="message-input" placeholder="Type message...">
+                    <button class="send-btn" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with Jamie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Fun text -->
+        <h1 class="fun-text">Welcome to Jamie your Ai Assistant Chatbot!</h1>
+
+        <!-- Let's Chat Button -->
+        <button id="startChatBtn" class="chat-btn">
+            <i class="fas fa-robot"></i> Let's Chat
+        </button>
+
+        <!-- Robo Character -->
+        <div class="robo-character">
+            <!-- Head -->
+            <div class="robo-head">
+                <div class="robo-eye left-eye">
+                    <div class="eye-pupil"></div>
+                </div>
+                <div class="robo-eye right-eye">
+                    <div class="eye-pupil"></div>
+                </div>
+                <div class="robo-mouth"></div>
+            </div>
+
+            <!-- Body -->
+            <div class="robo-body"></div>
+
+            <!-- Arms -->
+            <div class="robo-arm left-arm"></div>
+            <div class="robo-arm right-arm"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='welcome.js') }}"></script>
+</body>
+</html>
